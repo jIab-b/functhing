@@ -11,6 +11,8 @@ int main() {
     Camera3D cam = { {0.0f, 50.0f, 100.0f}, {0.0f, 0.0f, 0.0f}, {0.0f, 1.0f, 0.0f}, 60.0f, 0 };
     UpdateCamera(&cam, CAMERA_ORBITAL);
     float* heightmap = new float[CHUNK * CHUNK];
+    // Generate initial heightmap before the render loop
+    generateHeightmap(heightmap, CHUNK, CHUNK, static_cast<uint32_t>(GetTime() * 1000));
 
     while (!WindowShouldClose()) {
         if (IsKeyPressed(KEY_SPACE)) {
