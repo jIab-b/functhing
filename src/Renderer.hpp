@@ -6,6 +6,7 @@ struct Renderer {
     Shader shader;
     unsigned int vao, vbo, ibo;
     int width, height;
+    int indexCount;
 
     // Initialize shaders and buffers
     void Init(const char* vsPath, const char* fsPath);
