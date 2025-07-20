@@ -1,0 +1,7 @@
+include/
+lib/
+*.exe
+*.lib
+*.exp
+*.o
+*.obj
